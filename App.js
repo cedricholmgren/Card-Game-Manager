@@ -1,20 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Button, View, Text, Image, ScrollView, TextInput, Alert, } from 'react-native'
 
-export default function App() {
+
+
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hey bro!</Text>
-      <StatusBar style="auto" />
+    <View>
+      <MainButton/>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const MainButton = () => {
+  return (
+    <View>
+      <Button
+        title="Press me"
+        onPress={() => Alert.alert('Simple Button pressed')}
+      />
+    </View>
+  )
+}
+
+export default App
+
