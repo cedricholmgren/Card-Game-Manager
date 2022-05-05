@@ -2,30 +2,41 @@ import { StatusBar } from 'expo-status-bar';
 import { TouchableOpacity, Pressable, SafeAreaView, StyleSheet, Button, View, Text, Image, ScrollView, TextInput, Alert, } from 'react-native'
 
 
-
+//main app view
 const App = () => {
   return (
     <View>
+      <MainBanner/>
       <MainButton/>
     </View>
   )
 }
 
-
+//styles for buttons and graphics
 const styles = StyleSheet.create({
-  container: {
-    paddingTop: 500,
+  buttonContainer: {
+    paddingTop: 370,
     paddingHorizontal: 140,
   },
   greenButton: {
-    
     width: 100,
+    height: 100,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  bannerContainer: {
+    paddingTop: 20,
+    paddingHorizontal: 0,
+  },
+  greenBanner: {
+    width: 375,
     height: 100,
     alignItems: "center",
     justifyContent: "center",
   },
 })
 
+// image for button
 const ButtonImage = () => {
   return (
     <View>
@@ -40,9 +51,25 @@ const ButtonImage = () => {
   )
 }
 
+// Header banner, not very special
+const MainBanner  = () => {
+  return (
+    <View style={styles.bannerContainer}>
+      <Image
+        style={styles.greenBanner}
+        source={{
+          uri:
+          'https://www.pinclipart.com/picdir/big/551-5512566_banner-design-clipart-green-banner-transparent-background-png.png',
+        }}
+      />
+    </View>
+  )
+}
+
+//primary button for creating new games
 const MainButton = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.buttonContainer}>
       <TouchableOpacity onPress={()=>{alert("Farts")}}>
         <ButtonImage/>
       </TouchableOpacity>
