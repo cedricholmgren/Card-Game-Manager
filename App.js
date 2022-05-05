@@ -7,6 +7,7 @@ const App = () => {
   return (
     <View>
       <MainBanner/>
+      <PrimaryScroll/>
       <MainButton/>
     </View>
   )
@@ -14,8 +15,10 @@ const App = () => {
 
 //styles for buttons and graphics
 const styles = StyleSheet.create({
+  // primary green button stuff
   buttonContainer: {
-    paddingTop: 370,
+    position: 'absolute',
+    paddingTop: 500,
     paddingHorizontal: 140,
   },
   greenButton: {
@@ -24,6 +27,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  // primar green banner stuff
   bannerContainer: {
     paddingTop: 20,
     paddingHorizontal: 0,
@@ -34,6 +38,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  //primary scroll view
 })
 
 // image for button
@@ -73,6 +78,25 @@ const MainButton = () => {
       <TouchableOpacity onPress={()=>{alert("Farts")}}>
         <ButtonImage/>
       </TouchableOpacity>
+    </View>
+  )
+}
+
+// ScrollView to store games
+const PrimaryScroll = () => {
+  return  (
+    <View>
+      <ScrollView>
+        <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </Text>
+      </ScrollView>
     </View>
   )
 }
