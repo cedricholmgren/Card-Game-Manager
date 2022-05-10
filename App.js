@@ -88,8 +88,8 @@ const PrimaryScroll = (props) => {
     <View style={styles.scrollContainer}>
       <ScrollView>
         {props.games.map((item) => (
-          <View key={item.key}>
-            <Text style={styles.gamePreview}>{item.name}</Text>
+          <View key={item.key} style={styles.gamePreview}>
+            <Text>{item.name}</Text>
           </View>
         ))}
       </ScrollView>
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     height: 100,
     paddingTop: 20,
     paddingHorizontal: 0,
-    backgroundColor: "red",
+    //backgroundColor: "red",
   },
   greenBanner: {
     width: 375,
@@ -129,13 +129,14 @@ const styles = StyleSheet.create({
   },
   //primary scroll view
   scrollContainer: {
-    paddingTop: 1,
+    paddingTop: 30,
+    alignSelf: "center",
   },
   gamePreview: {
     width: 300,
     height: 50,
-    color: `#a9a9a9`,
-    padding: 30,
+    backgroundColor: "gray",
+    marginBottom: 50,
   },
 });
 
