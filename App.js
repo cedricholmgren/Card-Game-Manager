@@ -88,9 +88,13 @@ const PrimaryScroll = (props) => {
     <View style={styles.scrollContainer}>
       <ScrollView>
         {props.games.map((item) => (
-          <View key={item.key} style={styles.gamePreview}>
+          <TouchableOpacity
+            onPress={() => Alert.alert("hi: " + item.key)}
+            key={item.key}
+            style={styles.gamePreview}
+          >
             <Text>{item.name}</Text>
-          </View>
+          </TouchableOpacity>
         ))}
       </ScrollView>
     </View>
