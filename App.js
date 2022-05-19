@@ -76,9 +76,21 @@ const MainBanner = () => {
 const MainButton = (props) => {
   return (
     <View style={styles.buttonContainer}>
-      <TouchableOpacity onPress={props.onPress}>
+      <TouchableOpacity
+        onPress={props.onPress}
+        onPressIn={() => <NewGameInput />}
+      >
         <ButtonImage />
       </TouchableOpacity>
+    </View>
+  );
+};
+
+const NewGameInput = () => {
+  let onScreen = true;
+  return (
+    <View style={styles.gameInputScreen}>
+      <Text>Hey World!</Text>
     </View>
   );
 };
@@ -142,6 +154,12 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: "gray",
     marginBottom: 50,
+  },
+  gameInputScreen: {
+    width: 350,
+    height: 600,
+    backgroundColor: "blue",
+    //marginBottom: 50,
   },
 });
 
