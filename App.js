@@ -16,12 +16,13 @@ import {
 
 //main app view
 const App = () => {
+  //array for ScrollView
   const [games, setGames] = useState([]);
 
   const addGame = (newGame) => {
     setGames((currentGames) => [...currentGames, newGame]);
   };
-
+  //When MainButton is pressed  add new data to the array
   const onMainTouched = () => {
     const newGame = { name: "newGame", key: games.length + 1 };
     addGame(newGame);
